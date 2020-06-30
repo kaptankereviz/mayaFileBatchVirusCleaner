@@ -92,6 +92,8 @@ class MaBatchCleaner:
       self.populateList()
 
   def populateList(self, *args):
+    # delete list
+    self.ui_infected_list.delete(0, tk.END)
     if self.root_dir:
       self.infected_files = getInfectedMayaFiles(self.root_dir)
       for f in self.infected_files:
